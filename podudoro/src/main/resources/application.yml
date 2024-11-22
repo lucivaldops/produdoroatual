@@ -1,0 +1,20 @@
+server:
+ servlet:
+    context-path: /produdoro/api
+    
+spring:
+  data:
+    mongodb:
+      authentication-database: admin
+      uri: ${MONGO_DB_URI:mongodb+srv://lps:GiA1G7Nb5n7VzPIk@cluster0.rwlnh.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0}
+      auto-index-creation: true      
+
+springdoc:
+  swagger-ui:
+    path: /public/swagger
+
+ 
+produdoro:
+  jwt:
+    expiracao: ${JWT_TEMPO_EXPIRACAO:15}
+    chave: ${JWT_CHAVE:123456}
